@@ -1,6 +1,6 @@
 # RNASeq-Pipeline-Upstream
 In this project, I explain a step by step tutorial for developing upstream RNASee pipeline using bash scripting.
-For the full tutorial, visit [A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimomatic, HISAT2, SAMtools, and FeatureCounts](https://cnjumebioinfo.com/blog/blog4-file-types-details.html)
+For the full tutorial, visit [A Comprehensive RNA-Seq Upstream Pipeline in Bash with FastQC, MultiQC, Trimomatic, HISAT2, SAMtools, and FeatureCounts](https://cnjumebioinfo.com/blog/blog5-file-types-details.html)
 
 ## License
 MIT     
