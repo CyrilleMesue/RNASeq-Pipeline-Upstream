@@ -9,17 +9,17 @@ echo "Output Directories created!!!"
 # Array to hold all BAM files
 BAM_FILES=()
 
-for file in Reads/*_1.fastq; do
+for file in downloads/reads/*_1.fastq; do
     echo "Processing file: $file"
 
     # Place your processing commands here
     base=$(basename -s _1.fastq "$file")
 
     # Run fastqc
-    fastqc "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" -o data/fastqc1
+    fastqc "downloads/reads/${base}_1.fastq" "Reads/${base}_2.fastq" -o data/fastqc1
 
     # Run trimmomatic to trim reads with poor quality
-    java -jar trimmomatic-0.39.jar PE "Reads/${base}_1.fastq" "Reads/${base}_2.fastq" \
+    java -jar trimmomatic-0.39.jar PE "downloads/reads/${base}_1.fastq" "downloads/reads/${base}_2.fastq" \
     "data/trimmed_reads/${base}.trimmed.paired.R1.fastq" "data/trimmed_reads/${base}.trimmed.unpaired.R1.fastq" \
     "data/trimmed_reads/${base}.trimmed.paired.R2.fastq" "data/trimmed_reads/${base}.trimmed.unpaired.R2.fastq" TRAILING:10 -phred33 -threads 4
 

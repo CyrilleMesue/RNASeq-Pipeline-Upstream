@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create a folder named "Reads" if it doesn't exist
-mkdir -p Reads
+mkdir -p downloads downloads/reads
 
 # Array of SRR accession numbers
 SRR_LIST=(
@@ -29,7 +29,7 @@ for SRR in "${SRR_LIST[@]}"; do
     echo "Downloading and extracting reads for $SRR..."
 
     # Extract 1,000,000 reads from the SRA file
-    fastq-dump --split-files -X 100000 $SRR -O Reads
+    fastq-dump --split-files -X 100000 $SRR -O downloads/reads
 done
 
 echo "Download and extraction complete."
